@@ -1,0 +1,20 @@
+name: Security Gate Demo
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Lint scripts
+        run: shellcheck scripts/*.sh
+
+      - name: Check findings against limits
+        run: ./scripts/check_threshold.sh scripts/sample-findings.json 0 5
