@@ -2,7 +2,6 @@
   "findings": [
     { "id": "CVE-2020-8203",  "package": "lodash", "severity": "HIGH" },
     { "id": "CVE-2021-23337", "package": "lodash", "severity": "HIGH" },
-    { "id": "DEMO-0001",      "package": "demo",   "severity": "CRITICAL" },
     { "id": "DEMO-0002",      "package": "demo",   "severity": "LOW" }
   ]
 }
